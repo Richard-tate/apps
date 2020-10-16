@@ -1,0 +1,121 @@
+html{
+    height: 100vh;
+    min-width: 600px;
+    background-image: linear-gradient(60deg,#819ab0, rgb(29, 26, 120) );
+    background-repeat: no-repeat;
+}
+.container{
+    width: 600px;
+    font-family: 'raleway', sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 500px;
+    padding: 1.5rem 0 ;
+    align-items: center;
+}
+.main{
+    padding: 20px;
+   
+}
+.headline{
+    color: #ffffff;
+    font-size: 2em;
+}
+form{
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 6px;
+    display: flex;
+    box-shadow: #303030 5px 5px;
+}
+input[type="text"]{
+    height: 30px;
+    outline: 0 ;
+    border: none;
+    font-size: 1rem;
+    font-family: 'Raleway', sans-serif;
+    color: #595959;
+    flex-grow: 1;
+}
+
+button{
+    border-radius: 6px;
+    border: none;
+    background:transparent;
+    font-size: 1.6rem;
+    color: rgb(20, 153, 209);
+    outline: 0;
+    cursor: pointer;
+}
+button:hover{
+    color: red;
+}
+.todoList{
+    background-color: #ffffff;
+    border-radius: 6px;
+    margin-top: 20px;
+    padding: 10px 25px;
+    height: 100%;   
+    box-shadow: #303030 5px 5px;
+}
+ul{
+    padding-left: 0px;
+    list-style: none;
+}
+li{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+    font-size: 1rem;
+    padding: 15px 0 ;
+    color: #595959;
+}
+.checked {
+    text-decoration: line-through;
+  }
+  
+  .checked::before {
+    content: '';
+    position: relative;
+    border-color: rgb(18, 10, 250);
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+    left: -10px;
+  }
+
+i{
+    pointer-events: none;
+}
+.todo-item{
+    flex-grow: 1;
+}
+.todo-list-item{
+    transition: all 0.3s ease-out;
+}
+.todo-list-item-fall{
+    transform: translateY(12rem) rotateZ(20deg);
+    opacity: 0;
+}
+.clearAll{
+    display: flex;
+    font-size: 0.9rem;
+    cursor: pointer;
+    justify-content: center;
+    padding: 10px 3px;
+}
+.clearAll:hover{
+    padding: 10px 3px;
+    background: red;
+    border-radius: 6px;
+    color: #ffffff;
+}
