@@ -1,0 +1,140 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #303030;
+}
+.app {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.card-header{
+  margin-bottom: 1.5em;
+}
+
+.trump-img{
+  width: 200px;
+  max-height: 200px;
+  position: fixed;
+  z-index: 10;
+  left: -1em;
+  bottom: 3em;
+}
+
+.btn{
+  display: block;
+  margin-top: .5em;
+  margin-bottom: .5em;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+  width: 100%;
+}
+.controls {
+  width: 100%;
+  padding: 20px 50px;
+  margin-left: 2.8em;
+}
+.quotes {
+  padding: 20px 50px;
+  min-height: 200px;
+}
+.hidden {
+ visibility: hidden;
+}
+.quote-text {
+  padding-bottom: 20px;
+  font-size: 25px;
+  color: black;
+  margin-left: 4em;
+  top: 2em;
+}
+.bubble {
+  display: inline-block;
+  position: relative;
+  padding: 30px 40px;
+  border-radius: 10px;
+  border: 3px solid #000;
+  margin-bottom: 60px;
+  background: #fff;
+}
+
+.bubble::before{
+  content: '';
+  position: absolute;
+  left :0;
+  bottom: -50px;
+  height: 50px;
+  width: 90px;
+  border-radius: 0 0 100%;
+  box-shadow: -2px -2px 0 0 #000 inset, -23px 0 0 0 #fff inset, -25px -2px 0 0 #000 inset;
+}   
+
+.spinner {
+  margin: 10px auto;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.spinner > div {
+  background-color: #333;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% {
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .app {
+    width: 100%;
+  }
+  .quote-text {
+    font-size: 18px;
+  }
+}
