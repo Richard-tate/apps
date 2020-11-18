@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+.wrapper{
+    width: 400px;
+    margin: 6rem auto;
+    background-color: rgb(158, 155, 155);
+    border-radius: 8px 8px 10px 10px;
+    padding-top: 20px;
+    padding-bottom: 6px;
+    border-right: outset 7px rgb(158, 155, 155);
+    border-top: inset 3px rgb(202, 200, 200) ;
+    border-left: inset 2px rgb(202, 200, 200) ;
+    border-bottom: ridge 12px rgb(158, 155, 155);
+    box-shadow: 30px 30px 20px #606060;
+    perspective: 500px ;
+}
+.screen-wrapper{
+    transform-style: preserve-3d;
+    transform: rotateX(-6deg);
+    border:outset 4px #ccc5c5 ;
+    border-radius:10px ;
+    width: 96%;
+    margin: 0 auto;
+    padding: 6px;
+}
+.screen{
+    width: 98%;
+    height: 80px;
+    margin: 0 auto;
+    color: #fff;
+    background: #161616;
+    align-items: center;
+    justify-content: flex-end;
+    display: flex;
+    padding-right: 1rem;
+    font-size: 40px;
+    border-radius: 8px;
+    border-top: outset 4px #606060;
+    border-left: inset 6px #606060;
+    border-right: inset 6px #606060;
+    border-bottom: outset 8px #606060;
+}
+.calc-buttons{
+    width: 100%;
+    max-height: 580px;
+    margin: 1.5rem 0 .8rem;    
+    padding: 2px 6px;
+}
+.line{
+    width: 91%;
+    background-color: #606060;
+    height: 3px;
+    position: relative;
+    top: .8rem;
+    box-shadow: #e0dbdb 1px 1px 3px;
+    margin: 0 auto;
+    border: ridge 3px #968f8f;
+    border-radius: 3px;
+}
+.calc-btn-row{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.calc-btn{
+    flex-basis: 24.5%;
+    margin: 4px 4px;
+    background-color: rgb(220, 233, 220);
+    font-weight: bold;
+    font-size: 40px;
+    border-radius: 12px;
+    box-shadow:  1px 3px 6px rgb(44, 41, 41);
+    height: 100px;
+    border: outset 4px rgb(216, 213, 213);
+    cursor: pointer;
+}
+.calc-btn:hover, .calc-btn:last-child:hover{
+    background-color: rgb(176, 184, 248);
+    border: outset rgb(176, 184, 248) 4px;
+    transform: scale(.96);
+    box-shadow:  1px 4px 6px rgb(20, 20, 20);
+    transition: ease .5s;
+}
+.calc-btn.btn-span2{
+    flex-basis: 51%;
+}
+.calc-btn.btn-span3{
+    flex-basis: 78%;
+}
+.calc-btn:last-child{
+    background-color: orange;
+    border: outset 4px rgb(199, 132, 8);
+}
