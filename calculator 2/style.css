@@ -9,19 +9,19 @@ body{
     width: 400px;
     margin: 6rem auto;
     background-color: rgb(158, 155, 155);
-    border-radius: 8px 8px 10px 10px;
+    border-radius: 8px 8px 14px 14px;
     padding-top: 20px;
     padding-bottom: 6px;
-    border-right: outset 7px rgb(158, 155, 155);
-    border-top: inset 3px rgb(202, 200, 200) ;
-    border-left: inset 2px rgb(202, 200, 200) ;
-    border-bottom: ridge 12px rgb(158, 155, 155);
+    border-top:3px groove rgba(99,99,99,03);
+    border-left:4px groove rgba(99,99,99,0.3);
+    border-bottom:12px ridge rgba(80,80,80,0.5);
+    border-right:10px ridge rgba(80,80,80,0.6);
     box-shadow: 30px 30px 20px #606060;
-    perspective: 500px ;
+ 
+    transform:perspective(1000px) rotateY(0deg) rotateX(-3deg);
 }
 .screen-wrapper{
-    transform-style: preserve-3d;
-    transform: rotateX(-6deg);
+    transform:perspective(500px) rotateY(0deg) rotateX(-6deg);
     border:outset 4px #ccc5c5 ;
     border-radius:10px ;
     width: 96%;
@@ -40,10 +40,10 @@ body{
     padding-right: 1rem;
     font-size: 40px;
     border-radius: 8px;
-    border-top: outset 4px #606060;
-    border-left: inset 6px #606060;
-    border-right: inset 6px #606060;
-    border-bottom: outset 8px #606060;
+    border-top:8px ridge rgba(99,99,99,0.6);
+    border-left:6px ridge rgba(99,99,99,0.5);
+    border-bottom:10px groove rgba(80,80,80,0.6);
+    border-right:6px groove rgba(80,80,80,0.5);
 }
 .calc-buttons{
     width: 100%;
@@ -52,7 +52,7 @@ body{
     padding: 2px 6px;
 }
 .line{
-    width: 91%;
+    width: 100%;
     background-color: #606060;
     height: 3px;
     position: relative;
@@ -67,6 +67,7 @@ body{
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
+    transform:perspective(1000px) rotateY(0deg) rotateX(10deg);
 }
 
 .calc-btn{
@@ -75,18 +76,23 @@ body{
     background-color: rgb(220, 233, 220);
     font-weight: bold;
     font-size: 40px;
-    border-radius: 12px;
+    border-radius: 18px;
     box-shadow:  1px 3px 6px rgb(44, 41, 41);
     height: 100px;
-    border: outset 4px rgb(216, 213, 213);
+    border-top:3px groove     rgba(99,99,99,0.56);
+    border-left:4px groove    rgba(99,99,99,0.52);
+    border-bottom:10px ridge      rgba(80,80,80,0.34);
+    border-right:8px ridge     rgba(80,80,80,0.31);
     cursor: pointer;
+    transform:perspective(1000px) rotateY(0deg) rotateX(-2deg);
 }
 .calc-btn:hover, .calc-btn:last-child:hover{
     background-color: rgb(176, 184, 248);
     border: outset rgb(176, 184, 248) 4px;
     transform: scale(.96);
-    box-shadow:  1px 4px 6px rgb(20, 20, 20);
+    box-shadow:  6px 12px 12px rgb(20, 20, 20);
     transition: ease .5s;
+    outline-style                                                   : none;
 }
 .calc-btn.btn-span2{
     flex-basis: 51%;
@@ -95,6 +101,10 @@ body{
     flex-basis: 78%;
 }
 .calc-btn:last-child{
-    background-color: orange;
-    border: outset 4px rgb(199, 132, 8);
+    background-color: rgba(102, 124, 238, 0.85);
+    border-top:3px groove     rgba(99,99,99,0.56);
+    border-left:4px groove    rgba(99,99,99,0.52);
+    border-bottom:10px ridge      rgba(80,80,80,0.34);
+    border-right:8px ridge     rgba(80,80,80,0.31);
+    color: #fff;
 }

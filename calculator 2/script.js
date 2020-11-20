@@ -22,11 +22,14 @@ function handleSymbol(symbol){
             buffer = '0';
             startingTotal = 0;
             break;
+        case '.':
+            handleDecimal();
+            break;    
         case '=':
             if(previousOperator === null){
                 return;
             }    
-            flushOperation(parseInt(buffer));
+            flushOperation(parseFloat(buffer));
             previousOperator = null;
             buffer = startingTotal;
             startingTotal = 0 ;
@@ -58,7 +61,7 @@ function handleMath(symbol){
     if(buffer === '0'){
         return;
     }
-    const intBuffer = parseInt(buffer);
+    const intBuffer = parseFloat(buffer);
 
     if(startingTotal === 0) {
         startingTotal = intBuffer;
@@ -81,6 +84,14 @@ function flushOperation(intBuffer){
     }else  {
         startingTotal /= intBuffer;
     }
+}
+
+function handleDecimal(){
+        if(buffer === '0'){
+            buffer = '0.' ;
+        }else{
+            buffer += '.';
+        }
 }
 
 function init (){
